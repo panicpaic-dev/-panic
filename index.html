@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
+      background: linear-gradient(180deg, #0d0d0d, #111, #0d0d0d);
       color: #fff;
       margin: 0;
       padding: 0;
@@ -34,7 +34,7 @@
     /* HERO IMAGE */
     .hero {
       width: 100%;
-      height: 380px;
+      height: 550px;
       background-image: url('https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true');
       background-size: cover;
       background-position: center;
@@ -48,7 +48,7 @@
     }
 
     .hero-title {
-      font-size: 48px;
+      font-size: 60px;
       font-weight: 900;
       text-transform: uppercase;
       margin-bottom: 15px;
@@ -58,31 +58,72 @@
     /* BUY & SELL BUTTONS */
     .btn {
       display: inline-block;
-      padding: 12px 26px;
-      margin: 8px;
+      padding: 14px 32px;
+      margin: 10px;
       background-color: #00ff88;
       color: #000;
       font-weight: bold;
       border-radius: 999px;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 18px;
       animation: glow 2s infinite;
       transition: 0.25s;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       background-color: #00e676;
     }
 
-    /* DESCRIPTION */
+    /* BIG DESCRIPTION */
     .desc {
-      max-width: 800px;
-      margin: 30px auto;
-      font-size: 16px;
-      line-height: 1.7;
+      max-width: 900px;
+      margin: 50px auto;
+      font-size: 20px;
+      line-height: 1.8;
       opacity: 0.9;
       animation: fadeIn 2s ease-out;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 36px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #00ff88;
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* TOKENOMICS */
+    .tokenomics {
+      max-width: 900px;
+      margin: auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+      animation: slideUp 2s ease-out;
+    }
+
+    .tokenomics p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* ROADMAP */
+    .roadmap {
+      max-width: 900px;
+      margin: auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+      animation: slideUp 2.2s ease-out;
+    }
+
+    .roadmap p {
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     /* GALLERY */
@@ -109,7 +150,7 @@
 
     /* SOCIAL BUTTONS */
     .social {
-      margin: 30px 0;
+      margin: 40px 0;
       animation: fadeIn 2s ease-out;
     }
   </style>
@@ -135,7 +176,26 @@
   charts into memes, and panic into community power. Join the panic, embrace the chaos, and enjoy the ride.
 </div>
 
+<!-- TOKENOMICS -->
+<div class="section-title">Tokenomics</div>
+<div class="tokenomics">
+  <p>• Total Supply: 100,000,000 PANIC</p>
+  <p>• Liquidity: Locked</p>
+  <p>• Tax: 0%</p>
+  <p>• Utility: Memes, community, future integrations</p>
+</div>
+
+<!-- ROADMAP -->
+<div class="section-title">Roadmap</div>
+<div class="roadmap">
+  <p>• Phase 1: Launch + community building</p>
+  <p>• Phase 2: Meme contests + panic moments gallery</p>
+  <p>• Phase 3: Tools + integrations</p>
+  <p>• Phase 4: Partnerships + expansion</p>
+</div>
+
 <!-- GALLERY -->
+<div class="section-title">Gallery</div>
 <div class="gallery">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
@@ -148,6 +208,7 @@
 </div>
 
 <!-- SOCIAL LINKS -->
+<div class="section-title">Community</div>
 <div class="social">
   <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
   <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
