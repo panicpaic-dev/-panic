@@ -14,6 +14,34 @@
       overflow-x: hidden;
     }
 
+    /* SIDE ANIMATIONS */
+    .side-circle {
+      position: fixed;
+      width: 180px;
+      height: 180px;
+      background: rgba(0,255,136,0.15);
+      border-radius: 50%;
+      filter: blur(40px);
+      animation: float 6s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    .left {
+      left: -60px;
+      top: 20%;
+    }
+
+    .right {
+      right: -60px;
+      top: 60%;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(40px); }
+      100% { transform: translateY(0px); }
+    }
+
     /* ANIMATIONS */
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -157,6 +185,10 @@
 </head>
 
 <body>
+
+<!-- MOVING SIDE LIGHTS -->
+<div class="side-circle left"></div>
+<div class="side-circle right"></div>
 
 <!-- HERO IMAGE -->
 <div class="hero">
