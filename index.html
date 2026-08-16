@@ -13,14 +13,29 @@
       text-align: center;
     }
 
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #00ff88, #008844);
-      color: #000;
-      font-size: 40px;
-      font-weight: bold;
+    /* HERO IMAGE */
+    .hero {
+      width: 100%;
+      height: 380px;
+      background-image: url('https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0 20px #000;
     }
 
+    .hero-title {
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    /* BUY & SELL BUTTONS */
     .btn {
       display: inline-block;
       padding: 12px 26px;
@@ -40,6 +55,7 @@
       background-color: #00e676;
     }
 
+    /* GALLERY */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -60,35 +76,27 @@
       transform: scale(1.05);
     }
 
-    .section {
-      padding: 40px 20px;
-      margin: 20px auto;
-      max-width: 1000px;
-      background-color: #1a1a1a;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+    /* SOCIAL BUTTONS */
+    .social {
+      margin: 30px 0;
     }
   </style>
 </head>
 
 <body>
 
-<header>PanicCoin</header>
+<!-- 1) HERO IMAGE -->
+<div class="hero">
+  <div class="hero-title">PanicCoin</div>
+</div>
 
-<!-- BUY & SELL BUTTONS -->
+<!-- 2) BUY & SELL BUTTONS -->
 <div>
   <a class="btn" href="YOUR_BUY_LINK" target="_blank">BUY</a>
   <a class="btn" href="YOUR_SELL_LINK" target="_blank">SELL</a>
 </div>
 
-<!-- SOCIAL BUTTONS -->
-<div>
-  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
-  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
-  <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
-  <a class="btn" href="#" target="_blank">Telegram</a>
-</div>
-
+<!-- 3) GALLERY -->
 <div class="gallery">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
@@ -98,6 +106,14 @@
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
+</div>
+
+<!-- 4) SOCIAL LINKS -->
+<div class="social">
+  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
+  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
+  <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
+  <a class="btn" href="#" target="_blank">Telegram</a>
 </div>
 
 </body>
