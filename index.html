@@ -14,31 +14,31 @@
       overflow-x: hidden;
     }
 
-    /* SIMPLE SIDE ANIMATION */
+    /* SAFE SIDE LIGHT EFFECT */
     .side-light {
-      position: absolute;
-      width: 140px;
-      height: 140px;
-      background: rgba(0,255,136,0.15);
+      position: fixed;
+      width: 120px;
+      height: 120px;
+      background: rgba(0,255,136,0.18);
       border-radius: 50%;
-      filter: blur(40px);
-      animation: floatSide 6s infinite ease-in-out;
+      filter: blur(35px);
+      animation: floatSide 5s infinite ease-in-out;
       z-index: -1;
     }
 
     .left {
-      left: -60px;
+      left: -50px;
       top: 200px;
     }
 
     .right {
-      right: -60px;
+      right: -50px;
       top: 500px;
     }
 
     @keyframes floatSide {
       0% { transform: translateY(0px); opacity: 0.6; }
-      50% { transform: translateY(40px); opacity: 1; }
+      50% { transform: translateY(30px); opacity: 1; }
       100% { transform: translateY(0px); opacity: 0.6; }
     }
 
@@ -113,7 +113,7 @@
 
 <body>
 
-<!-- SIDE LIGHTS (SAFE VERSION) -->
+<!-- SAFE SIDE LIGHTS -->
 <div class="side-light left"></div>
 <div class="side-light right"></div>
 
@@ -143,4 +143,10 @@
 <!-- SOCIAL LINKS -->
 <div class="social">
   <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
-  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">
+  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
+  <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
+  <a class="btn" href="#" target="_blank">Telegram</a>
+</div>
+
+</body>
+</html>
