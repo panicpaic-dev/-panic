@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanicCoin</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h2 {
-            margin-top: 30px;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .gallery img {
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            object-fit: cover;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 8px;
-            background-color: #1f6feb;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background-color: #388bfd;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>PanicCoin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #00ff88, #008844);
+      color: #000;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,255,150,0.3);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 40px 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      background-color: #00ff88;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00cc66;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="section">
-        <h2>PanicCoin Gallery</h2>
-        <div class="gallery">
-            <img src="./WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg" alt="Image 1">
-            <img src="./WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg" alt="Image 2">
-            <img src="./WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg" alt="Image 3">
-            <img src="./WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(3).jpeg" alt="Image 4">
-            <img src="./WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(4).jpeg" alt="Image 5">
-        </div>
-    </div>
+<header>PanicCoin</header>
 
-    <div class="section">
-        <h2>Community</h2>
-        <a class="btn" href="#">Telegram</a>
-        <a class="btn" href="https://x.com/panic9bo2" target="_blank">Twitter</a>
-        <a class="btn" href="https://dexscreener.com" target="_blank">Dexscreener</a>
-        <a class="btn" href="https://solscan.io" target="_blank">Solscan</a>
-    </div>
+<div class="gallery">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(3).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(4).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
+</div>
+
+<div class="section">
+  <h2>Community</h2>
+
+  <a class="btn" href="#">Telegram</a>
+  <a class="btn" href="https://x.com/panic9bo2?s=11">Twitter</a>
+  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8">Dexscreener</a>
+  <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump">Solscan</a>
+</div>
 
 </body>
 </html>
