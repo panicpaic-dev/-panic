@@ -14,47 +14,32 @@
 
     a { color: inherit; }
 
-    header {
-      background: radial-gradient(circle at top, #00ff88 0%, #008844 35%, #050608 80%);
-      padding: 60px 20px 80px;
-      text-align: center;
-    }
-
-    .logo-circle {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #00ff88;
-      overflow: hidden;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 25px rgba(0,255,136,0.6);
-    }
-
-    .logo-circle img {
+    /* HERO IMAGE */
+    .hero {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: 420px;
+      background-image: url('https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0,255,136,0.3);
     }
 
-    .title {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: 2px;
+    .hero-title {
+      font-size: 48px;
+      font-weight: 900;
       text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px #000;
+      margin-bottom: 15px;
     }
 
-    .subtitle {
-      font-size: 16px;
-      max-width: 600px;
-      margin: 10px auto 25px;
-      opacity: 0.9;
-    }
-
-    .hero-buttons {
-      margin-top: 10px;
-    }
-
-    .btn {
+    .hero-buttons .btn {
       display: inline-block;
       padding: 12px 26px;
       margin: 8px;
@@ -68,21 +53,9 @@
       transition: 0.25s;
     }
 
-    .btn.secondary {
-      background-color: transparent;
-      color: #00ff88;
-      border: 1px solid #00ff88;
-      box-shadow: none;
-    }
-
     .btn:hover {
       transform: translateY(-2px);
       background-color: #00e676;
-    }
-
-    .btn.secondary:hover {
-      background-color: #00ff88;
-      color: #000;
     }
 
     .container {
@@ -108,41 +81,6 @@
       color: #00ff88;
     }
 
-    .section p {
-      font-size: 14px;
-      line-height: 1.7;
-      opacity: 0.9;
-    }
-
-    .two-columns {
-      display: grid;
-      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
-      gap: 25px;
-      align-items: start;
-    }
-
-    .tokenomics-list, .roadmap-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .tokenomics-list li,
-    .roadmap-list li {
-      margin-bottom: 10px;
-    }
-
-    .tokenomics-tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background-color: #11161c;
-      border: 1px solid #00ff88;
-      font-size: 12px;
-      margin-bottom: 6px;
-    }
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -164,104 +102,30 @@
       box-shadow: 0 0 22px rgba(0,255,136,0.4);
     }
 
-    .links-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .link-pill {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid #00ff88;
-      font-size: 13px;
-      text-decoration: none;
-      color: #00ff88;
-      transition: 0.25s;
-    }
-
-    .link-pill:hover {
-      background-color: #00ff88;
-      color: #000;
-    }
-
     footer {
       text-align: center;
       padding: 18px 10px 28px;
       font-size: 12px;
       opacity: 0.6;
     }
-
-    @media (max-width: 800px) {
-      .two-columns {
-        grid-template-columns: 1fr;
-      }
-      header {
-        padding: 40px 15px 50px;
-      }
-      .title {
-        font-size: 32px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo-circle">
-    <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true" alt="PanicCoin Logo">
-  </div>
-  <div class="title">PanicCoin</div>
-  <div class="subtitle">
-    A Solana meme coin built for chaos, fun, and pure panic energy.
-  </div>
+<!-- HERO IMAGE -->
+<div class="hero">
+  <div class="hero-title">PanicCoin</div>
   <div class="hero-buttons">
-    <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Trade on Dexscreener</a>
-    <a class="btn secondary" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">View on Solscan</a>
+    <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Trade</a>
+    <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
   </div>
-</header>
+</div>
 
 <div class="container">
 
   <div class="section">
-    <div class="two-columns">
-      <div>
-        <h2>About PanicCoin</h2>
-        <p>
-          PanicCoin is a meme coin on Solana inspired by market chaos, panic moments, and the funniest reactions in crypto.
-        </p>
-        <p>
-          It's not just a coin — it's a community built around memes, charts, and pure entertainment.
-        </p>
-      </div>
-      <div>
-        <h2>Tokenomics</h2>
-        <span class="tokenomics-tag">$PANIC • Solana</span>
-        <ul class="tokenomics-list">
-          <li>• Total Supply: 100,000,000 $PANIC</li>
-          <li>• Liquidity: Locked</li>
-          <li>• Tax: 0%</li>
-          <li>• Utility: Memes, community, future integrations</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Roadmap</h2>
-    <ul class="roadmap-list">
-      <li>• Phase 1: Launch + community building</li>
-      <li>• Phase 2: Meme contests + panic moments gallery</li>
-      <li>• Phase 3: Tools + integrations</li>
-      <li>• Phase 4: Partnerships + expansion</li>
-    </ul>
-  </div>
-
-  <div class="section">
     <h2>Panic Gallery</h2>
-    <p>Moments of chaos captured in images.</p>
     <div class="gallery">
       <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
       <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
@@ -270,17 +134,6 @@
       <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg?raw=true">
       <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg?raw=true">
       <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Community & Links</h2>
-    <p>Join the panic movement:</p>
-    <div class="links-row">
-      <a class="link-pill" href="#" target="_blank">Telegram (soon)</a>
-      <a class="link-pill" href="https://x.com/panic9bo2?s=11" target="_blank">X (Twitter)</a>
-      <a class="link-pill" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
-      <a class="link-pill" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
     </div>
   </div>
 
