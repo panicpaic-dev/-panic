@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0d0d0d, #111, #0d0d0d);
+      background: #0d0d0d;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -14,49 +14,49 @@
       overflow-x: hidden;
     }
 
-    /* SIDE ANIMATIONS */
-    .side-circle {
+    /* SIDE LIGHT WAVES */
+    .side-wave {
       position: fixed;
-      width: 180px;
-      height: 180px;
-      background: rgba(0,255,136,0.15);
-      border-radius: 50%;
-      filter: blur(40px);
-      animation: float 6s infinite ease-in-out;
+      width: 260px;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0,255,136,0.25), transparent 70%);
+      filter: blur(60px);
+      animation: waveMove 6s infinite ease-in-out;
       z-index: -1;
     }
 
-    .left {
-      left: -60px;
-      top: 20%;
+    .left-wave {
+      left: -120px;
+      top: 0;
     }
 
-    .right {
-      right: -60px;
-      top: 60%;
+    .right-wave {
+      right: -120px;
+      top: 0;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(40px); }
-      100% { transform: translateY(0px); }
+    @keyframes waveMove {
+      0% { transform: translateY(0px); opacity: 0.7; }
+      50% { transform: translateY(80px); opacity: 1; }
+      100% { transform: translateY(0px); opacity: 0.7; }
     }
 
-    /* ANIMATIONS */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* FLOATING PARTICLES */
+    .particle {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #00ff88;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: floatParticle 8s infinite linear;
+      z-index: -1;
     }
 
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
-      50% { box-shadow: 0 0 20px rgba(0,255,136,0.6); }
-      100% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+      50% { transform: translateY(-80px) translateX(40px); opacity: 1; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
     }
 
     /* HERO IMAGE */
@@ -103,55 +103,21 @@
       background-color: #00e676;
     }
 
-    /* BIG DESCRIPTION */
-    .desc {
-      max-width: 900px;
-      margin: 50px auto;
-      font-size: 20px;
-      line-height: 1.8;
-      opacity: 0.9;
-      animation: fadeIn 2s ease-out;
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    /* SECTION TITLES */
-    .section-title {
-      font-size: 36px;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      color: #00ff88;
-      animation: fadeIn 2s ease-out;
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
-    /* TOKENOMICS */
-    .tokenomics {
-      max-width: 900px;
-      margin: auto;
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
-      animation: slideUp 2s ease-out;
-    }
-
-    .tokenomics p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    /* ROADMAP */
-    .roadmap {
-      max-width: 900px;
-      margin: auto;
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
-      animation: slideUp 2.2s ease-out;
-    }
-
-    .roadmap p {
-      font-size: 18px;
-      line-height: 1.7;
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
+      50% { box-shadow: 0 0 20px rgba(0,255,136,0.6); }
+      100% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
     }
 
     /* GALLERY */
@@ -186,9 +152,15 @@
 
 <body>
 
-<!-- MOVING SIDE LIGHTS -->
-<div class="side-circle left"></div>
-<div class="side-circle right"></div>
+<!-- SIDE WAVES -->
+<div class="side-wave left-wave"></div>
+<div class="side-wave right-wave"></div>
+
+<!-- PARTICLES -->
+<div class="particle" style="left:20px; top:70%; animation-delay:0s;"></div>
+<div class="particle" style="left:40px; top:30%; animation-delay:1s;"></div>
+<div class="particle" style="right:20px; top:50%; animation-delay:2s;"></div>
+<div class="particle" style="right:60px; top:20%; animation-delay:3s;"></div>
 
 <!-- HERO IMAGE -->
 <div class="hero">
@@ -201,33 +173,7 @@
   <a class="btn" href="YOUR_SELL_LINK" target="_blank">SELL</a>
 </div>
 
-<!-- DESCRIPTION -->
-<div class="desc">
-  PanicCoin is a high‑energy meme token built for chaos, fun, and pure market madness.
-  Inspired by the wild reactions of traders during volatile moments, PanicCoin transforms fear into entertainment,
-  charts into memes, and panic into community power. Join the panic, embrace the chaos, and enjoy the ride.
-</div>
-
-<!-- TOKENOMICS -->
-<div class="section-title">Tokenomics</div>
-<div class="tokenomics">
-  <p>• Total Supply: 100,000,000 PANIC</p>
-  <p>• Liquidity: Locked</p>
-  <p>• Tax: 0%</p>
-  <p>• Utility: Memes, community, future integrations</p>
-</div>
-
-<!-- ROADMAP -->
-<div class="section-title">Roadmap</div>
-<div class="roadmap">
-  <p>• Phase 1: Launch + community building</p>
-  <p>• Phase 2: Meme contests + panic moments gallery</p>
-  <p>• Phase 3: Tools + integrations</p>
-  <p>• Phase 4: Partnerships + expansion</p>
-</div>
-
 <!-- GALLERY -->
-<div class="section-title">Gallery</div>
 <div class="gallery">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
@@ -240,13 +186,5 @@
 </div>
 
 <!-- SOCIAL LINKS -->
-<div class="section-title">Community</div>
 <div class="social">
-  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
-  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
-  <a class="btn" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump" target="_blank">Solscan</a>
-  <a class="btn" href="#" target="_blank">Telegram</a>
-</div>
-
-</body>
-</html>
+  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">
