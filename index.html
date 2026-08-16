@@ -6,37 +6,19 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #050608;
-      color: #f5f5f5;
+      background-color: #0d0d0d;
+      color: #fff;
       margin: 0;
       padding: 0;
-    }
-
-    a { color: inherit; }
-
-    /* HERO IMAGE */
-    .hero {
-      width: 100%;
-      height: 420px;
-      background-image: url('https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      box-shadow: 0 0 40px rgba(0,255,136,0.3);
     }
 
-    .hero-title {
-      font-size: 48px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 0 0 20px #000;
-      margin-bottom: 15px;
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #00ff88, #008844);
+      color: #000;
+      font-size: 40px;
+      font-weight: bold;
     }
 
     .hero-buttons .btn {
@@ -58,91 +40,75 @@
       background-color: #00e676;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 30px 20px 60px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-      background-color: #0c0f13;
-      border-radius: 16px;
-      padding: 25px 20px 30px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
-
-    .section h2 {
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 24px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #00ff88;
-    }
-
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .gallery img {
       width: 100%;
       border-radius: 12px;
-      box-shadow: 0 0 18px rgba(0,0,0,0.8);
-      transition: 0.3s;
-      object-fit: cover;
-      max-height: 260px;
+      box-shadow: 0 0 15px rgba(0,255,150,0.3);
+      transition: transform 0.3s;
     }
 
     .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 22px rgba(0,255,136,0.4);
+      transform: scale(1.05);
     }
 
-    footer {
-      text-align: center;
-      padding: 18px 10px 28px;
-      font-size: 12px;
-      opacity: 0.6;
+    .section {
+      padding: 40px 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+    }
+
+    .btn-small {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #00ff88;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO IMAGE -->
-<div class="hero">
-  <div class="hero-title">PanicCoin</div>
+<header>PanicCoin</header>
 
-  <div class="hero-buttons">
-    <a class="btn" href="YOUR_BUY_LINK" target="_blank">BUY</a>
-    <a class="btn" href="YOUR_SELL_LINK" target="_blank">SELL</a>
-  </div>
+<!-- BUY & SELL BUTTONS -->
+<div class="hero-buttons">
+  <a class="btn" href="YOUR_BUY_LINK" target="_blank">BUY</a>
+  <a class="btn" href="YOUR_SELL_LINK" target="_blank">SELL</a>
 </div>
 
-<div class="container">
-
-  <div class="section">
-    <h2>Panic Gallery</h2>
-    <div class="gallery">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(3).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(4).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg?raw=true">
-      <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
-    </div>
-  </div>
-
+<div class="gallery">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(3).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(4).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(1).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40%20(2).jpeg?raw=true">
+  <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
 </div>
 
-<footer>
-  PanicCoin • Built on Solana • Meme project, not financial advice.
-</footer>
+<div class="section">
+  <h2>Community</h2>
+  <a class="btn-small" href="https://x.com/panic9bo2?s=11">Twitter</a>
+  <a class="btn-small" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8">Dexscreener</a>
+  <a class="btn-small" href="https://solscan.io/token/4vjshaGy7QPG3MYrYsS4QU2GmQ2aAWmRFPakS6sfpump">Solscan</a>
+</div>
 
 </body>
 </html>
