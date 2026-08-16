@@ -11,6 +11,24 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
+      50% { box-shadow: 0 0 20px rgba(0,255,136,0.6); }
+      100% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
     }
 
     /* HERO IMAGE */
@@ -26,6 +44,7 @@
       justify-content: center;
       align-items: center;
       text-shadow: 0 0 20px #000;
+      animation: fadeIn 1.5s ease-out;
     }
 
     .hero-title {
@@ -33,6 +52,7 @@
       font-weight: 900;
       text-transform: uppercase;
       margin-bottom: 15px;
+      animation: slideUp 1.5s ease-out;
     }
 
     /* BUY & SELL BUTTONS */
@@ -46,13 +66,23 @@
       border-radius: 999px;
       text-decoration: none;
       font-size: 14px;
-      box-shadow: 0 0 15px rgba(0,255,136,0.4);
+      animation: glow 2s infinite;
       transition: 0.25s;
     }
 
     .btn:hover {
       transform: translateY(-2px);
       background-color: #00e676;
+    }
+
+    /* DESCRIPTION */
+    .desc {
+      max-width: 800px;
+      margin: 30px auto;
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.9;
+      animation: fadeIn 2s ease-out;
     }
 
     /* GALLERY */
@@ -63,6 +93,7 @@
       padding: 30px;
       max-width: 1200px;
       margin: auto;
+      animation: fadeIn 2s ease-out;
     }
 
     .gallery img {
@@ -79,24 +110,32 @@
     /* SOCIAL BUTTONS */
     .social {
       margin: 30px 0;
+      animation: fadeIn 2s ease-out;
     }
   </style>
 </head>
 
 <body>
 
-<!-- 1) HERO IMAGE -->
+<!-- HERO IMAGE -->
 <div class="hero">
   <div class="hero-title">PanicCoin</div>
 </div>
 
-<!-- 2) BUY & SELL BUTTONS -->
+<!-- BUY & SELL BUTTONS -->
 <div>
   <a class="btn" href="YOUR_BUY_LINK" target="_blank">BUY</a>
   <a class="btn" href="YOUR_SELL_LINK" target="_blank">SELL</a>
 </div>
 
-<!-- 3) GALLERY -->
+<!-- DESCRIPTION -->
+<div class="desc">
+  PanicCoin is a high‑energy meme token built for chaos, fun, and pure market madness.
+  Inspired by the wild reactions of traders during volatile moments, PanicCoin transforms fear into entertainment,
+  charts into memes, and panic into community power. Join the panic, embrace the chaos, and enjoy the ride.
+</div>
+
+<!-- GALLERY -->
 <div class="gallery">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(1).jpeg?raw=true">
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38%20(2).jpeg?raw=true">
@@ -108,7 +147,7 @@
   <img src="https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.40.jpeg?raw=true">
 </div>
 
-<!-- 4) SOCIAL LINKS -->
+<!-- SOCIAL LINKS -->
 <div class="social">
   <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
   <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">Dexscreener</a>
