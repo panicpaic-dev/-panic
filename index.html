@@ -14,55 +14,38 @@
       overflow-x: hidden;
     }
 
-    /* SIDE LIGHT WAVES */
-    .side-wave {
-      position: fixed;
-      width: 260px;
-      height: 100%;
-      background: radial-gradient(circle, rgba(0,255,136,0.25), transparent 70%);
-      filter: blur(60px);
-      animation: waveMove 6s infinite ease-in-out;
-      z-index: -1;
-    }
-
-    .left-wave {
-      left: -120px;
-      top: 0;
-    }
-
-    .right-wave {
-      right: -120px;
-      top: 0;
-    }
-
-    @keyframes waveMove {
-      0% { transform: translateY(0px); opacity: 0.7; }
-      50% { transform: translateY(80px); opacity: 1; }
-      100% { transform: translateY(0px); opacity: 0.7; }
-    }
-
-    /* FLOATING PARTICLES */
-    .particle {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: #00ff88;
+    /* SIMPLE SIDE ANIMATION */
+    .side-light {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background: rgba(0,255,136,0.15);
       border-radius: 50%;
-      opacity: 0.4;
-      animation: floatParticle 8s infinite linear;
+      filter: blur(40px);
+      animation: floatSide 6s infinite ease-in-out;
       z-index: -1;
     }
 
-    @keyframes floatParticle {
-      0% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
-      50% { transform: translateY(-80px) translateX(40px); opacity: 1; }
-      100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+    .left {
+      left: -60px;
+      top: 200px;
+    }
+
+    .right {
+      right: -60px;
+      top: 500px;
+    }
+
+    @keyframes floatSide {
+      0% { transform: translateY(0px); opacity: 0.6; }
+      50% { transform: translateY(40px); opacity: 1; }
+      100% { transform: translateY(0px); opacity: 0.6; }
     }
 
     /* HERO IMAGE */
     .hero {
       width: 100%;
-      height: 550px;
+      height: 450px;
       background-image: url('https://github.com/panicpaic-dev/-panic/blob/main/WhatsApp%20Image%202026-08-16%20at%2016.26.38.jpeg?raw=true');
       background-size: cover;
       background-position: center;
@@ -72,7 +55,6 @@
       justify-content: center;
       align-items: center;
       text-shadow: 0 0 20px #000;
-      animation: fadeIn 1.5s ease-out;
     }
 
     .hero-title {
@@ -80,7 +62,6 @@
       font-weight: 900;
       text-transform: uppercase;
       margin-bottom: 15px;
-      animation: slideUp 1.5s ease-out;
     }
 
     /* BUY & SELL BUTTONS */
@@ -94,30 +75,12 @@
       border-radius: 999px;
       text-decoration: none;
       font-size: 18px;
-      animation: glow 2s infinite;
       transition: 0.25s;
     }
 
     .btn:hover {
       transform: translateY(-3px);
       background-color: #00e676;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
-      50% { box-shadow: 0 0 20px rgba(0,255,136,0.6); }
-      100% { box-shadow: 0 0 10px rgba(0,255,136,0.2); }
     }
 
     /* GALLERY */
@@ -128,7 +91,6 @@
       padding: 30px;
       max-width: 1200px;
       margin: auto;
-      animation: fadeIn 2s ease-out;
     }
 
     .gallery img {
@@ -145,22 +107,15 @@
     /* SOCIAL BUTTONS */
     .social {
       margin: 40px 0;
-      animation: fadeIn 2s ease-out;
     }
   </style>
 </head>
 
 <body>
 
-<!-- SIDE WAVES -->
-<div class="side-wave left-wave"></div>
-<div class="side-wave right-wave"></div>
-
-<!-- PARTICLES -->
-<div class="particle" style="left:20px; top:70%; animation-delay:0s;"></div>
-<div class="particle" style="left:40px; top:30%; animation-delay:1s;"></div>
-<div class="particle" style="right:20px; top:50%; animation-delay:2s;"></div>
-<div class="particle" style="right:60px; top:20%; animation-delay:3s;"></div>
+<!-- SIDE LIGHTS (SAFE VERSION) -->
+<div class="side-light left"></div>
+<div class="side-light right"></div>
 
 <!-- HERO IMAGE -->
 <div class="hero">
@@ -187,4 +142,5 @@
 
 <!-- SOCIAL LINKS -->
 <div class="social">
-  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">
+  <a class="btn" href="https://x.com/panic9bo2?s=11" target="_blank">Twitter</a>
+  <a class="btn" href="https://dexscreener.com/solana/HdnZ2gt9NZpsVsrGT9JE77xXofsjy5Ti6WSaZxPfqqR8" target="_blank">
